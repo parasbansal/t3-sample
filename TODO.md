@@ -1,7 +1,7 @@
 # T3 User Management TODO
 
 - [x] Deploy the project (vercel)
-- [ ] Tidy up build process
+- [x] Tidy up build process
 - [ ] Scaffold basic ui with mock data
 - [ ] Setup a database (Vercel Postgres)
 - [ ] Attach database to UI
