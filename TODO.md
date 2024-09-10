@@ -2,10 +2,10 @@
 
 - [x] Deploy the project (vercel)
 - [x] Tidy up build process
-- [ ] Scaffold basic ui with mock data
-- [ ] Setup a database (Vercel Postgres)
-- [ ] Attach database to UI
-- [ ] Add authentication (w/ clerk)
+- [x] Scaffold basic ui with mock data
+- [x] Setup a database (Vercel Postgres)
+- [x] Attach database to UI
+- [x] Add authentication (w/ clerk)
 - [ ] Add User Management Page
 - [ ] Error Management (w/ Sentry)
 - [ ] Routing/ user page (parallel route)
