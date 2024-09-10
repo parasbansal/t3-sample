@@ -1,33 +1,41 @@
-import React from "react";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+
 import { db } from "@/server/db";
 
 export default async function page() {
   const users = await db.query.users.findMany();
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Created At</th>
-          <th>Updated At</th>
-        </tr>
-      </thead>
-      <tbody>
+    <Table>
+      <TableCaption>A list of users.</TableCaption>
+      <TableHeader>
+        <TableRow>
+          <TableHead className="w-[100px]">ID</TableHead>
+          <TableHead>Name</TableHead>
+          <TableHead>Email</TableHead>
+          <TableHead>Created At</TableHead>
+          <TableHead>Action</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
         {users.map((user) => (
-          <tr key={user.id}>
-            <td>{user.id}</td>
-            <td>{user.name}</td>
-            <td>{user.email}</td>
-            <td>{new Date(user.createdAt).toISOString()}</td>
-            <td>
-              {user.updatedAt ? new Date(user.updatedAt).toISOString() : null}
-            </td>
-          </tr>
+          <TableRow key={user.id}>
+            <TableCell>{user.id}</TableCell>
+            <TableCell>{user.name}</TableCell>
+            <TableCell>{user.email}</TableCell>
+            <TableCell>{new Date(user.createdAt).toISOString()}</TableCell>
+            <TableCell>E D</TableCell>
+          </TableRow>
         ))}
-      </tbody>
-    </table>
+      </TableBody>
+    </Table>
   );
 }

@@ -7,6 +7,7 @@
 - [x] Attach database to UI
 - [x] Add authentication (w/ clerk)
 - [ ] Add User Management Page
+- [ ] "taint" (server-only)
 - [ ] Error Management (w/ Sentry)
 - [ ] Routing/ user page (parallel route)
 - [ ] Remove user (w/ server actions)
