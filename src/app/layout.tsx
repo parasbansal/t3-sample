@@ -1,4 +1,5 @@
 import { ClerkProvider } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
 
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
@@ -17,10 +18,14 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        baseTheme: dark,
+      }}
+    >
       <html lang="en" className={`${GeistSans.variable}`}>
         <body>
-          <div className="bg-background text-foreground flex min-h-screen flex-col">
+          <div className="bg-primary text-primary-foreground flex min-h-screen flex-col">
             <TopNav />
             {children}
           </div>
