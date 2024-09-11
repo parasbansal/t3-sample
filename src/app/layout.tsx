@@ -25,7 +25,7 @@ export default function RootLayout({
     >
       <html lang="en" className={`${GeistSans.variable}`}>
         <body>
-          <div className="bg-primary text-primary-foreground flex min-h-screen flex-col">
+          <div className="flex min-h-screen flex-col">
             <TopNav />
             {children}
           </div>
